@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+#result {
+            display: block;
+            overflow: hidden;
+            resize: none;
+        }
+
+    </style>
+</head>
+<body onload="onload()">
+    <div class="container">
+        <h1>EXP config Genrantor</h1>
+        <div class="row">
+            <div class="col-sm-5 col-xs-12">
+                <form action="javascript:void(0);" autocomplete="off">
+                    <div class="form-group">
+                        <lable for="HcpID">HCP ID：</lable>
+                        <input type="text" id="HcpID" class="form-control" placeholder="HcpID" value="23456789" required >
+                    </div>
+                    <div class="form-group">
+                        <lable for="EffectiveDay">Effective DAY (YYYYMMDD)：</lable>
+                        <input type="text" id="EffectiveDay" class="form-control" placeholder="Effective Day (YYYYMMDD)" value="20221108080000" required />
+                    </div>
+                    <div class="form-group">
+                        <lable for="Env">ENV : </lable>
+                        <input type="text" id="Env" class="form-control" placeholder="ENV" value="UAT" required />
+                    </div>
+                    <input type="submit" value="Gen" class="btn btn-primary" onclick="generate()" />
+                </form>
+            </div>
+            <div class="col-sm-7 col-xs-12">
+                <textarea id="result" placeholder="" onchange="auto_grow(this)" oninput="auto_grow(this)"></textarea>
+
+            </div>
+            <div id="output"></div>
+            <p id="output1"></p>
+            <p id="output2"></p>
+        </div>
+    </div>
+    <hr />
+    <div id="footer">
+        Made by: Ben IP
+        <br />
+    </div>
+    <script src="script.js"></script>
+</body>ß
+
+</html>
