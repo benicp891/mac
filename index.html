@@ -11,7 +11,8 @@
 
     </style>
 </head>
-<body onload="onload()">
+<body >
+<!--onload="onload()">-->
     <div class="container">
         <h1>EXP config Genrantor</h1>
         <div class="row">
@@ -19,7 +20,7 @@
                 <form action="javascript:void(0);" autocomplete="off">
                     <div class="form-group">
                         <lable for="HcpID">HCP ID：</lable>
-                        <input type="text" id="HcpID" class="form-control" placeholder="HcpID" value="23456789" required >
+                        <input type="text" id="HcpID" class="form-control" placeholder="HcpID" value="5634981022" required >
                     </div>
                     <div class="form-group">
                         <lable for="EffectiveDay">Effective DAY (YYYYMMDD)：</lable>
@@ -33,7 +34,8 @@
                 </form>
             </div>
             <div class="col-sm-7 col-xs-12">
-                <textarea id="result" placeholder="" onchange="auto_grow(this)" oninput="auto_grow(this)"></textarea>
+                <textarea id="result" placeholder="" ></textarea>
+				<!--onchange="auto_grow(this)" oninput="auto_grow(this)"-->
 
             </div>
             <div id="output"></div>
