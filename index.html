@@ -3,24 +3,29 @@
 <head>
     <title></title>
     <style type="text/css">
-#result {
+	#result {
             display: block;
             overflow: hidden;
             resize: none;
         }
-
+	p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
     </style>
 </head>
-<body >
-<!--onload="onload()">-->
+<body onload="onload()">
     <div class="container">
-        <h1 id="h1">EXP config Genrantor</h1>
+        <h1>EXP config Genrantor</h1>
         <div class="row">
             <div class="col-sm-5 col-xs-12">
                 <form action="javascript:void(0);" autocomplete="off">
                     <div class="form-group">
                         <lable for="HcpID">HCP ID：</lable>
-                        <input type="text" id="HcpID" class="form-control" placeholder="HcpID" value="5634981022" required >
+                        <input type="text" id="HcpID" class="form-control" placeholder="HcpID" value="5189883789" required >
                     </div>
                     <div class="form-group">
                         <lable for="EffectiveDay">Effective DAY (YYYYMMDD)：</lable>
@@ -28,26 +33,37 @@
                     </div>
                     <div class="form-group">
                         <lable for="Env">ENV : </lable>
-                        <input type="text" id="Env" class="form-control" placeholder="ENV" value="PRD" required />
+                        <input type="text" id="Env" class="form-control" placeholder="ENV" value="UAT" required />
                     </div>
                     <input type="submit" value="Gen" class="btn btn-primary" onclick="generate()" />
-					<input type="submit" value="reset" class="btn btn-primary" onclick="reset()" />
                 </form>
             </div>
             <div class="col-sm-7 col-xs-12">
-                <textarea id="result" placeholder="" ></textarea>
-				<!--onchange="auto_grow(this)" oninput="auto_grow(this)"-->
+                <textarea id="result" placeholder="" onchange="auto_grow(this)" oninput="auto_grow(this)"></textarea>
 
             </div>
+			<div>
+			##################################################################################<br>## 
+			<p id="hcp info">## Gleneagles Hospital [5189883789]</p>
+			<p id="deploy day (YYYYMMDDhhmmss)">##</p><br>
+			##################################################################################<br>
+			</div>
+            <div id="result">
+			<p>## report format setup</p>
             <p id="output"></p>
+			<p>## General Exception Report setup(for RAD doamin)</p>
             <p id="output2"></p>
-            
+			<p>## report generation process summary setup</p>
+			<p id="output3"></p>
+			<p>## report generation exception report setup</p>
+			<p id="output4"></p>
+			<p>## RID Process exception report (for RAD doamin)</p>
+			</div>
         </div>
-		<button onclick = "downloadFile()"> save File </button>
     </div>
     <hr />
     <div id="footer">
-        Made by:
+        Made by: Ben IP
         <br />
     </div>
     <script src="script.js"></script>
